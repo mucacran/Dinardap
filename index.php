@@ -7,5 +7,8 @@
 </head>
 <body>
     <h5>Hola soy Sergio</h5>
+    <?php
+    echo '<h1>Al parecer vamos bien</h1>';
+    ?>
 </body>
 </html>

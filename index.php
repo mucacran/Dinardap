@@ -9,6 +9,11 @@
 </head>
 <body>
 <?php
+//Bus de Desarrollo
+//https://cfnuiosrv105:7843/dinardapService?wsdl
+
+//Bus de Producción
+//https://canales.cfn.fin.ec:7849/dinardapService?wsdl
     //llamando a la libreria de SOUP
         require_once "lib/nusoap.php";
     //conectandome al servidor de Dirnadap

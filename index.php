@@ -19,7 +19,7 @@
     //conectandome al servidor de Dirnadap
         $cliente = new nusoap_client('https://canales.cfn.fin.ec:7849/dinardapService?wsdl','wsdl');
 
-        $resultado = $cliente->call('service',array('codigoPaquete'=>'604','numeroIdentificacion'=>'0917045387'));
+        $resultado = $cliente->call('getFichaGeneral',array('codigoPaquete'=>'604','numeroIdentificacion'=>'0923127740'));
 ?>
 <div class="container">
     <div class="row">
@@ -36,8 +36,8 @@
         <div class="col-sm-12 col-md-6 border">
             <?php
                 echo '<pre>';
-                echo var_dump($resultado);
-                //echo print_r($cliente);
+                //echo var_dump($resultado);
+                echo print_r($resultado);
                 echo '</pre>';
 
                 //arreglo asociativo multidimencional

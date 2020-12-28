@@ -1,0 +1,89 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:getFichaGeneralResponse xmlns:ns2="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/">
+         <return>
+            <codigoPaquete>604</codigoPaquete>
+            <instituciones>
+               <datosPrincipales>
+                  <registros>
+                     <campo>cedula</campo>
+                     <codigo>1</codigo>
+                     <valor>0918878018</valor>
+                  </registros>
+                  <registros>
+                     <campo>nombre</campo>
+                     <codigo>2</codigo>
+                     <valor>CALDERON CUEVA DARWIN FRANCISCO</valor>
+                  </registros>
+                  <registros>
+                     <campo>fechaNacimiento</campo>
+                     <codigo>5</codigo>
+                     <valor>10/07/1984</valor>
+                  </registros>
+                  <registros>
+                     <campo>lugarNacimiento</campo>
+                     <codigo>6</codigo>
+                     <valor>GUAYAS/GUAYAQUIL/CARBO (CONCEPCION)</valor>
+                  </registros>
+                  <registros>
+                     <campo>nacionalidad</campo>
+                     <codigo>7</codigo>
+                     <valor>ECUATORIANA</valor>
+                  </registros>
+                  <registros>
+                     <campo>estadoCivil</campo>
+                     <codigo>8</codigo>
+                     <valor>CASADO</valor>
+                  </registros>
+                  <registros>
+                     <campo>conyuge</campo>
+                     <codigo>10</codigo>
+                     <valor>CORREA DIAZ DIANA PASTORA</valor>
+                  </registros>
+                  <registros>
+                     <campo>domicilio</campo>
+                     <codigo>15</codigo>
+                     <valor>GUAYAS/GUAYAQUIL/FEBRES CORDERO</valor>
+                  </registros>
+                  <registros>
+                     <campo>callesDomicilio</campo>
+                     <codigo>16</codigo>
+                     <valor>GARZOTA 2DA ETAPA MZ67</valor>
+                  </registros>
+                  <registros>
+                     <campo>numeroCasa</campo>
+                     <codigo>17</codigo>
+                     <valor>-</valor>
+                  </registros>
+                  <registros>
+                     <campo>fechaDefuncion</campo>
+                     <codigo>20</codigo>
+                     <valor/>
+                  </registros>
+                  <registros>
+                     <campo>instruccion</campo>
+                     <codigo>558</codigo>
+                     <valor>SUPERIOR</valor>
+                  </registros>
+                  <registros>
+                     <campo>profesion</campo>
+                     <codigo>563</codigo>
+                     <valor>INGENIERO</valor>
+                  </registros>
+                  <registros>
+                     <campo>cedulaConyuge</campo>
+                     <codigo>864</codigo>
+                     <valor>0923993984</valor>
+                  </registros>
+                  <registros>
+                     <campo>sexo</campo>
+                     <codigo>1328</codigo>
+                     <valor>HOMBRE</valor>
+                  </registros>
+               </datosPrincipales>
+               <nombre>Registro Civil</nombre>
+            </instituciones>
+         </return>
+      </ns2:getFichaGeneralResponse>
+   </soap:Body>
+</soap:Envelope>

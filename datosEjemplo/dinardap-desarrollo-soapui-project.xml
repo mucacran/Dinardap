@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="24b3e479-12ec-4a19-b5be-ae7f92d98327" activeEnvironment="Default" name="Dinardap Desarrollo" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b46b7de1-9aa7-4bb0-a791-ad494bf7f2f8" wsaVersion="NONE" name="InteroperadorlImplServiceSoapBinding" type="wsdl" bindingName="{http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/}InteroperadorlImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://cfnuiosrv105:7843/dinardapService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://cfnuiosrv105:7843/dinardapService?wsdl"><con:part><con:url>https://cfnuiosrv105:7843/dinardapService?wsdl</con:url><con:content><![CDATA[<!--File interoperador_1.wsdl, application CFN_DINARDAP_APP, static library Dinardap_Backend_V3-->
+<wsdl:definitions name="InteroperadorlImplService" targetNamespace="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="interoperador_1_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="InteroperadorlImplServiceSoapBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+      <xsd:include schemaLocation="https://cfnuiosrv105:7843/dinardapService?xsd=xsd0"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getFichaGeneralResponse">
+    <wsdl:part element="tns:getFichaGeneralResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getFichaGeneral">
+    <wsdl:part element="tns:getFichaGeneral" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="InteroperadorlImpl">
+    <wsdl:operation name="getFichaGeneral">
+      <wsdl:input message="tns:getFichaGeneral" name="getFichaGeneral"/>
+      <wsdl:output message="tns:getFichaGeneralResponse" name="getFichaGeneralResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InteroperadorlImplServiceSoapBinding" type="tns:InteroperadorlImpl">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getFichaGeneral">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getFichaGeneral">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFichaGeneralResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InteroperadorlImplService">
+    <wsdl:port binding="tns:InteroperadorlImplServiceSoapBinding" name="InteroperadorlImplPort">
+      <soap:address location="https://cfnuiosrv105:7843/dinardapService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://cfnuiosrv105:7843/dinardapService?xsd=xsd0</con:url><con:content><![CDATA[<!--File interoperador_1_InlineSchema1.xsd, application CFN_DINARDAP_APP, static library Dinardap_Backend_V3-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="getFichaGeneral">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoPaquete" type="xs:string"/>
+      <xs:element minOccurs="0" name="numeroIdentificacion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFichaGeneralResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:fichaGeneral"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fichaGeneral">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoPaquete" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="instituciones" nillable="true" type="tns:institucion"/>
+      <xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="institucion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="datosPrincipales" type="tns:datosPrincipales"/>
+      <xs:element minOccurs="0" name="detalle" type="tns:detalle"/>
+      <xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="datosPrincipales">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="registros" nillable="true" type="tns:registro"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="campo" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigo" type="xs:string"/>
+      <xs:element minOccurs="0" name="valor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detalle">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="items" nillable="true" type="tns:item"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="item">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="registros" nillable="true" type="tns:registro"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element ibmSchExtn:docRoot="true" name="getFichaGeneral" nillable="true" type="tns:getFichaGeneral"/>
+  <xs:element ibmSchExtn:docRoot="true" name="getFichaGeneralResponse" nillable="true" type="tns:getFichaGeneralResponse"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://cfnuiosrv105:7843/dinardapService</con:endpoint></con:endpoints><con:operation id="eb0de25d-f33d-4376-81f0-60725b959240" isOneWay="false" action="" name="getFichaGeneral" bindingOperationName="getFichaGeneral" type="Request-Response" outputName="getFichaGeneralResponse" inputName="getFichaGeneral" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="401d76d0-b770-4288-bbb5-12e0dd3baad2" name="Request SC"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cfnuiosrv105:7843/dinardapService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:getFichaGeneral>
+         <!--Optional:-->
+         <codigoPaquete>692</codigoPaquete>
+         <!--Optional:-->
+         <numeroIdentificacion>0992340495001</numeroIdentificacion>
+      </ser:getFichaGeneral>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/InteroperadorlImpl/getFichaGeneral"/><con:wsrmConfig version="1.2"/></con:call><con:call id="d43f1e00-25b7-4a7d-bb94-2c4530c7ac73" name="Request SRI"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://canales.cfn.fin.ec:7849/dinardapService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:getFichaGeneral>
+         <!--Optional:-->
+         <codigoPaquete>606</codigoPaquete>
+         <!--Optional:-->
+         <numeroIdentificacion>0992340495001</numeroIdentificacion>
+      </ser:getFichaGeneral>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/InteroperadorlImpl/getFichaGeneral"/><con:wsrmConfig version="1.2"/></con:call><con:call id="9af8edb5-f4db-453e-9e01-dc94e012937a" name="Request RC"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://cfnuiosrv105:7843/dinardapService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:getFichaGeneral>
+         <!--Optional:-->
+         <codigoPaquete>604</codigoPaquete>
+         <!--Optional:-->
+         <numeroIdentificacion>0918878018</numeroIdentificacion>
+      </ser:getFichaGeneral>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://servicio.interoperadorws.interoperacion.dinardap.gob.ec/InteroperadorlImpl/getFichaGeneral"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

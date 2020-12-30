@@ -27,6 +27,7 @@
 			</div>
 		</div>
 	</div>
+    <hr>
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -51,54 +52,13 @@
 	                    	echo $i . " <b>". $registro["campo"] . ":</b> ". $registro["valor"] . "<br><b>codigo: </b>" . $registro["codigo"] . "<br><br>";
                 		}
                 	}
-                echo '</pre>';
+                    echo '</pre>';
 					////////
-					}else{
-						echo "vacio";
 					}
 				?>
 			</div>
 		</div>
 	</div>
-	<?php
-	    //llamando a la libreria de SOUP
-	        require_once "lib/nusoap.php";
-	    //conectandome al servidor de Dirnadap
-	        //function reemplazarNumerodecedula(){
-	        	//$numeroCedula = $_POST['cedula'];
-
-				$cliente = new nusoap_client('https://canales.cfn.fin.ec:7849/dinardapService?wsdl','wsdl');
-				$resultado = $cliente->call('getFichaGeneral',array('codigoPaquete'=>'604','numeroIdentificacion'=> '0924209836' ));
-
-				echo '<pre>';
-                $instituciones = $resultado["return"]["instituciones"];
-                $registros = $instituciones["datosPrincipales"]["registros"];
-                foreach($registros as $i => $registro){
-                	if($registro["codigo"] == 2){
-	                    echo $i . " <b>". $registro["campo"] . ":</b> ". $registro["valor"] . "<br><b>codigo: </b>" . $registro["codigo"] . "<br><br>";
-                	}
-                }
-                echo '</pre>';
-	        //}
-
-	?>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <?php
-                /*echo '<pre>';
-                $instituciones = $resultado["return"]["instituciones"];
-                $registros = $instituciones["datosPrincipales"]["registros"];
-                foreach($registros as $i => $registro){
-                	if($registro["codigo"] == 2){
-	                    echo $i . " <b>". $registro["campo"] . ":</b> ". $registro["valor"] . "<br><b>codigo: </b>" . $registro["codigo"] . "<br><br>";
-                	}
-                }
-                echo '</pre>';*/
-            ?>
-        </div>
-    </div>
-</div>
 <div class="container">
 	<div class="row">
 		<div class="col">

@@ -21,9 +21,10 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 </head>
 <body>
 	<div class="container">
-		<h1>
-		cargando el formulario
-		</h1>
+		
+		<h1>cargando el formulario</h1>
+		
+		
 	</div>
 	<div class="container">
 		<div class="row">
@@ -57,7 +58,9 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
                     echo '</pre>';
 						?>
 <!---->
-<?php include 'formulario-denunciasYreclamo.php'; ?>
+<?php //include 'formulario-denunciasYreclamo.php'; ?>
+<?php include 'formulario-denunciasYreclamo_1.php'; ?>
+
 <!---->
 				<?php
 					}

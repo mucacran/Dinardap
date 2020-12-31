@@ -16,28 +16,28 @@
 </div>
 <fieldset disabled>
 <div class="cf7-form-control">
-<i class="fa fa-user antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="<?php echo $razonSocial ?>" size="40" class="wpcf7-form-control wpcf7-text "  aria-invalid="false" placeholder="<?php echo $razonSocial ?>"></span>
+<i class="fa fa-user antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="<?php echo $razonSocial ?>" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="<?php echo $razonSocial ?>"></span>
 <div class="clearfix"></div>
 </div>
 <div class="cf7-form-control">
-<i class="fa fa-address-card-o antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap numero-cedula"><input type="text" name="numero-cedula" value="<?php  echo $cedula ?>" size="40" class="wpcf7-form-control wpcf7-text "  aria-invalid="false" placeholder="<?php echo $cedula ?>"></span>
+<i class="fa fa-address-card-o antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap numero-cedula"><input type="text" name="numero-cedula" value="<?php  echo $cedula ?>" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="<?php echo $cedula ?>"></span>
 <div class="clearfix"></div>
 </div>
 </fieldset>
 <div class="cf7-form-control">
-<i class="fa fa-envelope antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email  wpcf7-validates-as-email"  aria-invalid="false" placeholder="Su Email *"></span>
+<i class="fa fa-envelope antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Su Email *"></span>
 <div class="clearfix"></div>
 </div>
 <div class="cf7-form-control">
-<i class="fa fa-phone antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap tel-179"><input type="tel" name="tel-179" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel  wpcf7-validates-as-tel"  aria-invalid="false" placeholder="Número de teléfono o Celular *"></span>
+<i class="fa fa-phone antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap tel-179"><input type="tel" name="tel-179" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Número de teléfono o Celular *"></span>
 <div class="clearfix"></div>
 </div>
 <div class="cf7-form-control">
-<i class="fa fa-comments-o antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text "  aria-invalid="false" placeholder="Asunto *"></span>
+<i class="fa fa-comments-o antesInput" aria-hidden="true"></i><span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Asunto *"></span>
 <div class="clearfix"></div>
 </div>
 <div class="cf7-form-control textarea">
-    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea "  aria-invalid="false" placeholder="Contenido de la queja denuncia o reclamo *"></textarea></span>
+    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Contenido de la queja denuncia o reclamo *"></textarea></span>
 </div>
 <div class="cf7-form-control">
 <div class="form-group">

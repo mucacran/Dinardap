@@ -44,3 +44,32 @@ function prefix_send_email_to_admin() {
 add_action('admin_post_nopriv_contact_form', 'prefix_send_email_to_admin' );
 add_action('admin_post_contact_form', 'prefix_send_email_to_admin' );
 /*************************************************************************** */
+/********************************FUncion para el formulario de contact form 7 */
+add_action('wp_head','paraDarNombreYCedulaCOntacForm7');
+function paraDarNombreYCedulaCOntacForm7(){
+	if(is_page(13337)){
+	?>
+		<script>
+			document.addEventListener( 'wpcf7submit', function( event ) {
+			var inputs = event.detail.inputs;
+			var idFormulario = event.detail.contactFormId;
+
+			if ( '13335' == idFormulario ) {
+				for ( var i = 0; i < inputs.length; i++ ) {
+					if ( 'your-name' == inputs[i].name ) {
+					alert( inputs[i].value );
+					<?php
+					echo '<h2>Su mensaje a sido enviado</h2>'
+					?>
+					break;
+					};
+				}
+			}
+			}, false );
+		</script>
+	<?php
+	}
+}
+/*************FIN DE FUncion para el formulario de contact form 7 */
+//pagina donde encontre como preguntar si es usuario o esta dentro de una pagina
+//https://maugelves.com/etiquetas-condicionales/
